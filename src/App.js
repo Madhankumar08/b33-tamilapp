@@ -1,107 +1,45 @@
-import './App.css';
+import "./App.css";
+import { AddColor } from "./AddColor";
 
-function App() {
+export default function App() {
+  const users = [
+    {
+    name : "madhan",
+    pic:"https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2020/11/11/133486-virat-kohli-pti-j.jpg?itok=9xdid56G&c=4d942a74b30a9cd43bb1639dd6002b86"
+  },
+    {
+    name : "faizal",
+    pic: "https://i.pinimg.com/originals/ba/bb/f4/babbf4905c628305645d625992313222.jpg" 
+    },
+    {
+    name : "sonu",
+    pic:"https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg"
+    }
+  ]
+
+
+  const people = [ "madhan","faizal","sonu","maddy","billu"]
+  
+  
   return (
-    <div>
+    <div className="App">
+      {/* {users.map((user)=>(
+       <Msg
+       name={user.name} pic={user.pic}
+      />
+      ))}
+      
 
-      {/* As a heading */}
-      <nav className="container">
-        <div class="navbar navbar-light bg-light">
-          <span class="mb-0 font-weight-bold h2">Pricing Table</span>
-        </div>
-      </nav>
+      {people.map( personName => <Welcome name={personName} /> )} */}
+      {/* <Counter />
+      <Counter />
+      <Counter /> */}
+      
 
-      {/* This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! */}
-      <section class="pricing py-5">
-        <div class="container">
-          <div class="row">
-
-            {/* Free Tier */}
-            <div class="col-lg-4">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
-                  <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
-                  <hr />
-
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited
-                      Private Projects</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated
-                      Phone Support</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain
-                    </li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
-                      Reports</li>
-                  </ul>
-
-                  <div class="d-grid">
-                    <a href="#" class="btn btn-primary text-uppercase">Button</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Plus Tier */}
-            <div class="col-lg-4">
-              <div class="card mb-5 mb-lg-0">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
-                  <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
-                  <hr />
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
-                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
-                      Reports</li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href="#" class="btn btn-primary text-uppercase">Button</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Pro Tier */}
-            <div class="col-lg-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
-                  <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
-                  <hr />
-
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong>
-                    </li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free
-                      Subdomains</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
-                  </ul>
-                  <div class="d-grid">
-                    <a href="#" class="btn btn-primary text-uppercase">Button</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+       <AddColor />
     </div>
-  )
+  );
+
 }
 
-export default App;
+
