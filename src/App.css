@@ -34,6 +34,7 @@ body {
 .movie-container {
   width: 340px;
   /* background-color: orange; */
+  height: min-content;
 }
 
 .movie-poster {
@@ -60,4 +61,17 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 18px;
+}
+.not-found {
+  width: 100%;
+  max-height: 700%;
+  object-fit: contain;
+}
+.movie-detail-container {
+  max-width: 800px;
+}
+.add-movie-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
